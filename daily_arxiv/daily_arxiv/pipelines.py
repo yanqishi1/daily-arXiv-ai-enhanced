@@ -6,6 +6,10 @@
 
 # useful for handling different item types with a single interface
 import arxiv
+import json
+import os
+import sys
+from datetime import datetime, timedelta
 
 
 class DailyArxivPipeline:
@@ -25,5 +29,4 @@ class DailyArxivPipeline:
         item["categories"] = paper.categories
         item["comment"] = paper.comment
         item["summary"] = paper.summary
-        print(item)
         return item
